@@ -1,0 +1,107 @@
+docker run -d --rm -it --name looper-it devopsdockeruh/simple-web-service:ubuntu   
+
+Unable to find image 'devopsdockeruh/simple-web-service:ubuntu' locally
+ubuntu: Pulling from devopsdockeruh/simple-web-service
+5d3b2c2d21bb: Pull complete
+3fc2062ea667: Pull complete
+75adf526d75b: Pull complete
+965d4bbb586a: Pull complete
+4f4fb700ef54: Pull complete
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:ubuntu
+c489a03923dd5b201665d9c2e12b8a318d55af64233c15eca7f93f149672686d
+
+
+docker attach looper-it           
+ 
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+read escape sequence
+
+
+docker exec -it looper-it bash  
+
+root@c489a03923dd:/usr/src/app# cat /usr/src/app/text.log
+2024-05-21 18:43:49 +0000 UTC
+2024-05-21 18:43:51 +0000 UTC
+2024-05-21 18:43:53 +0000 UTC
+2024-05-21 18:43:55 +0000 UTC
+2024-05-21 18:43:57 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:43:59 +0000 UTC
+2024-05-21 18:44:01 +0000 UTC
+2024-05-21 18:44:03 +0000 UTC
+2024-05-21 18:44:05 +0000 UTC
+2024-05-21 18:44:07 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:44:09 +0000 UTC
+2024-05-21 18:44:11 +0000 UTC
+2024-05-21 18:44:13 +0000 UTC
+2024-05-21 18:44:15 +0000 UTC
+2024-05-21 18:44:17 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:44:19 +0000 UTC
+2024-05-21 18:44:21 +0000 UTC
+2024-05-21 18:44:23 +0000 UTC
+2024-05-21 18:44:25 +0000 UTC
+2024-05-21 18:44:27 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:44:29 +0000 UTC
+2024-05-21 18:44:31 +0000 UTC
+2024-05-21 18:44:33 +0000 UTC
+2024-05-21 18:44:35 +0000 UTC
+2024-05-21 18:44:37 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:44:39 +0000 UTC
+2024-05-21 18:44:41 +0000 UTC
+2024-05-21 18:44:43 +0000 UTC
+2024-05-21 18:44:45 +0000 UTC
+2024-05-21 18:44:47 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:44:49 +0000 UTC
+2024-05-21 18:44:51 +0000 UTC
+2024-05-21 18:44:53 +0000 UTC
+2024-05-21 18:44:55 +0000 UTC
+2024-05-21 18:44:57 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:44:59 +0000 UTC
+2024-05-21 18:45:01 +0000 UTC
+2024-05-21 18:45:03 +0000 UTC
+2024-05-21 18:45:05 +0000 UTC
+2024-05-21 18:45:07 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:45:09 +0000 UTC
+2024-05-21 18:45:11 +0000 UTC
+2024-05-21 18:45:13 +0000 UTC
+2024-05-21 18:45:15 +0000 UTC
+2024-05-21 18:45:17 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:45:19 +0000 UTC
+2024-05-21 18:45:21 +0000 UTC
+2024-05-21 18:45:23 +0000 UTC
+2024-05-21 18:45:25 +0000 UTC
+2024-05-21 18:45:27 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:45:29 +0000 UTC
+2024-05-21 18:45:31 +0000 UTC
+2024-05-21 18:45:33 +0000 UTC
+2024-05-21 18:45:35 +0000 UTC
+2024-05-21 18:45:37 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-05-21 18:45:39 +0000 UTC
+2024-05-21 18:45:41 +0000 UTC
+2024-05-21 18:45:43 +0000 UTC
+2024-05-21 18:45:45 +0000 UTC
+2024-05-21 18:45:47 +0000 UTC
+root@c489a03923dd:/usr/src/app# exit
+
+docker attach looper-it
+^C
+
+
