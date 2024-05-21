@@ -1,0 +1,12 @@
+docker ps -a                                                                                                                                                                                                  
+CONTAINER ID   IMAGE                                                        COMMAND                  CREATED          STATUS                      PORTS                              NAMES
+375c50874f43   nginx                                                        "/docker-entrypoint.…"   51 seconds ago   Exited (0) 18 seconds ago                                      boring_curran
+7120f908477d   nginx                                                        "/docker-entrypoint.…"   52 seconds ago   Exited (0) 15 seconds ago                                      pensive_antonelli
+74a35373dbad   nginx                                                        "/docker-entrypoint.…"   53 seconds ago   Up 52 seconds               80/tcp                             loving_margulis
+
+
+docker image ls                                                                                                                                                                                         
+REPOSITORY                                                   TAG          IMAGE ID       CREATED         SIZE
+nginx                                                        latest       b690f5f0a2d5   6 months ago    187MB
+
+
