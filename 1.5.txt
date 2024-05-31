@@ -1,0 +1,14 @@
+docker run -d --rm -it --name alpine-secret  devopsdockeruh/simple-web-service:alpine
+
+docker exec  -it alpine-secret sh
+
+#  less  /usr/src/app/text.log
+
+docker kill alpine-secret
+
+docker image ls                                                                                                                              
+
+REPOSITORY                                                   TAG          IMAGE ID       CREATED         SIZE
+ubuntu                                                       24.04        bf3dc08bfed0   4 weeks ago     76.2MB
+devopsdockeruh/simple-web-service                            ubuntu       4e3362e907d5   3 years ago     83MB
+devopsdockeruh/simple-web-service                            alpine       fd312adc88e0   3 years ago     15.7MB
