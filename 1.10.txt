@@ -1,0 +1,3 @@
+docker run  -p 127.0.0.1:3456:8080  web-server
+
+then in browser: http://localhost:3456/
