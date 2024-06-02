@@ -1,0 +1,47 @@
+Dockerfiles:
+Backend:
+
+FROM golang:1.16.13-alpine3.15
+
+WORKDIR /usr/src/app
+
+COPY ./material-applications/example-backend .
+
+ENV REQUEST_ORIGIN=http://localhost:5000
+ENV PORT 8000
+
+EXPOSE 8000
+
+RUN go build
+
+CMD ./server
+
+
+Frontend:
+FROM ubuntu
+
+WORKDIR /usr/src/app
+
+COPY ./material-applications/example-frontend .
+
+RUN apt-get update
+RUN apt install -y curl
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash
+RUN apt install -y nodejs
+RUN npm install
+RUN REACT_APP_BACKEND_URL=http://localhost:8000 npm run build
+RUN npm install -g serve
+
+EXPOSE 5000
+
+CMD serve -s -l 5000 build
+
+
+
+
+
+Commands:
+docker run -p 5000:5000  -ti  javafront
+
+docker run -p8000:8000 gobackend     
+
