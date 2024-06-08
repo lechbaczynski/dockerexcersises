@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  backend:
+    image: gobackend
+    environment:
+      - REQUEST_ORIGIN=http://localhost:5000
+      - PORT=8000
+      - REDIS_HOST=redis
+    command: ["./server"]
+    ports:
+      - "8000:8000"
+    build: .
+    container_name: 24backend
+  frontend:
+    image: javafront
+    command: "serve -s -l 5000 build"
+    ports:
+      - "5000:5000"
+    build: .
+    container_name: 24frontend
+  redis:
+    image: redis
+    command: "redis-server --save 60 1 --loglevel warning"
+    build: .
+    container_name: 24redis
