@@ -1,0 +1,3 @@
+Excersise 2.5 - didn't do any changes in docker-compose and it worked :smile: 
+I did docker compose up,  went to the website at localhost:3000, clicked the button waited and it tunred green. Tested it twice
+see screenshot in main directory
