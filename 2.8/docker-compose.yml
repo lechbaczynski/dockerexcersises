@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    image: gobackend
+    environment:
+      - REQUEST_ORIGIN=http://localhost
+      - PORT=80
+      - REDIS_HOST=redis
+      - POSTGRES_HOST=28db
+      - POSTGRES_PASSWORD=example
+    command: ["./server"]
+#    ports:
+#      - "8000:8000"
+    build: .
+    container_name: 28backend
+    depends_on: [ 'db', 'redis' ]
+  frontend:
+    image: javafront
+    command: "serve -s -l 80 build"
+#    ports:
+#      - "80:80"
+    build: .
+    container_name: 28frontend
+  redis:
+    image: redis
+    command: "redis-server --save 60 1 --loglevel warning"
+    build: .
+    container_name: 28redis
+  db:
+    image: postgres:13.2-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+    container_name: 28db
+    volumes:
+      - ./database:/var/lib/postgresql/data
+
+  web:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+
